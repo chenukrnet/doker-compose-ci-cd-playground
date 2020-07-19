@@ -1,0 +1,4 @@
+FROM postgres:12.3
+ENV POSTGRES_USER=sonarqube
+ENV POSTGRES_PASSWORD=sonarqube
+ENV POSTGRES_DB=sonarqube
