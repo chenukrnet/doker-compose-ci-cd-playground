@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   postgres-db:
-    build: postgres/.
+    build: sonar/postgres/.
     ports:
     - "5432:5432"
   sonarcube:
@@ -10,3 +10,7 @@ services:
       - "9000:9000"
     depends_on:
       - postgres-db
+  jenkins:
+    build: jenkins/.
+    ports:
+      - "8080:8080"
